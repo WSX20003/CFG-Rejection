@@ -21,5 +21,22 @@ Our method is visualized as follows.
 
 ![method](images/method.png)
 
-The proposed CFG-Rejection framework consists of three key steps: 1) Score difference tracking: record the instantaneous score difference at each denoising step. 2) Partial differences accumulation: compute the cumulative score differences from a predefined step τ. 3) Sample selection: discard low-potential trajectories based on a threshold γ. Our method integrates seamlessly into existing generation pipelines with minimal computational overhead. By enabling early-stage filtering through an intrinsic, self-contained metric, it substantially reduces the cost associated with full denoising and reliance on external reward models.
+The proposed CFG-Rejection framework consists of three key steps: 
+* __Score difference tracking__: record the instantaneous score difference at each denoising step. 
+* __Partial differences accumulation__: compute the cumulative score differences from a predefined step τ. 
+* __Sample selection__: discard low-potential trajectories based on a threshold γ. 
 
+Our method integrates seamlessly into existing generation pipelines with minimal computational overhead. By enabling early-stage filtering through an intrinsic, self-contained metric, it substantially reduces the cost associated with full denoising and reliance on external reward models.
+
+# Experiment
+We first observe the geometrc correlation between samples and ASD on a toy example given by: https://github.com/NVlabs/edm2. The tutorial codes are provided in the `toy example` folder. Shown as figures bellow, high-ASD samples concentrate in the dense central region with strong class consistency, while low-ASD samples tend to appear in sparse regions with weaker semantic alignment.
+
+![toy](images/toy.png)
+
+We further demonstrate our observation with Average k-Nearest Neighbor (AvgkNN) and Local Outlier Factor (LOF) curves on the ImageNet dataset. Several human preference metrics (PickScore, Aesthetic Score and HPSv2) are utilized to have a quantitative comparison for the filtering images. Corresponding codes are provided in the `ImageNet` folder. The qualitative comparsons for images from three different labels are shown as follows:
+
+![experiment](images/ImageNet.png)
+
+We further demonstrate the effectiveness of our method with SDv1.5 and SD3 on the benchmark Geneval and DPG-Bench. Corresponding codes are provided in the `benchmark` folder.
+
+We also test applicability of our method to the state-of-the-art Flux diffusion architecture on a set of challenging visual text rendering tasks. Corresponding codes are provided in the `flux` folder.
