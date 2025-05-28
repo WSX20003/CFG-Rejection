@@ -37,6 +37,6 @@ We further demonstrate our observation with Average k-Nearest Neighbor (AvgkNN) 
 
 ![experiment](images/ImageNet.png)
 
-We further demonstrate the effectiveness of our method with SDv1.5 and SD3 on the benchmark Geneval and DPG-Bench. Corresponding codes are provided in the `benchmark` folder.
+We further demonstrate the effectiveness of our method with SDv1.5 and SDXL on the benchmark Geneval and DPG-Bench. Corresponding codes are provided in the `benchmark` folder.
 
 We also test applicability of our method to the state-of-the-art Flux diffusion architecture on a set of challenging visual text rendering tasks. Corresponding codes are provided in the `flux` folder.
