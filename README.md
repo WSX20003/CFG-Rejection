@@ -33,7 +33,7 @@ We first observe the geometrc correlation between samples and ASD on a toy examp
 
 ![toy](images/toy.png)
 
-We further demonstrate our observation with Average k-Nearest Neighbor (AvgkNN) and Local Outlier Factor (LOF) curves on the ImageNet dataset. Several human preference metrics (PickScore, Aesthetic Score and HPSv2) are utilized to have a quantitative comparison for the filtering images. Corresponding codes are provided in the `ImageNet` folder. The qualitative comparsons for images from three different labels are shown as follows:
+We further demonstrate our observation with Average k-Nearest Neighbor (AvgkNN) and Local Outlier Factor (LOF) curves on the ImageNet dataset. Several human preference metrics (PickScore, Aesthetic Score and HPSv2) are utilized to have a quantitative comparison for the filtering images. Corresponding codes are provided in the `ImageNet` folder. The qualitative comparisons for images from three different labels are shown as follows:
 
 ![experiment](images/ImageNet.png)
 
